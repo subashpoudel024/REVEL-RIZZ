@@ -3,7 +3,8 @@ import requests
 import base64
 
 # FastAPI endpoint
-API_URL = "http://localhost:8000/api/reply-generator"  # Change if deployed elsewhere
+API_URL = "https://dvorakinnovationai-revel-rizz-api.hf.space/api/reply-generator"  # Change if deployed elsewhere
+
 
 st.set_page_config(page_title="Reply Generator", page_icon="💬", layout="centered")
 
