@@ -7,7 +7,7 @@ API_URL = "https://dvorakinnovationai-revel-rizz-api.hf.space/api/looks-analyzer
 
 st.set_page_config(page_title="Looks Analyzer", page_icon="🧑‍🎨", layout="centered")
 
-st.title("🧑‍🎨 Looks Analyzer")
+st.title("Looks Analyzer")
 st.write("Upload your image and get style & looks suggestions!")
 
 # Upload image

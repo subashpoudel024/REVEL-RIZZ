@@ -8,8 +8,8 @@ API_URL = "https://dvorakinnovationai-revel-rizz-api.hf.space/api/reply-generato
 
 st.set_page_config(page_title="Reply Generator", page_icon="💬", layout="centered")
 
-st.title("💬 Reply Generator")
-st.write("Upload an image, ask a question, and get AI-powered replies.")
+st.title("Reply Generator")
+st.write("Upload image of chat , ask a question, and get AI-powered replies.")
 
 # Upload image
 uploaded_file = st.file_uploader("Upload an image (JPG/PNG)", type=["jpg", "jpeg", "png"])

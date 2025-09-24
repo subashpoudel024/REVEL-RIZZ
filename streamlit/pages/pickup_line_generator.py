@@ -6,7 +6,7 @@ API_URL = "https://dvorakinnovationai-revel-rizz-api.hf.space/api/pickup-line-ge
 
 st.set_page_config(page_title="Pickup Line Generator", page_icon="💘", layout="centered")
 
-st.title("💘 Pickup Line Generator")
+st.title("Pickup Line Generator")
 st.write("Generate fun and creative pickup lines with customizable tones and attributes.")
 
 # User query input
