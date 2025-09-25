@@ -12,8 +12,8 @@ class Generate:
     
     def run(self, state:State):
         messages = [SystemMessage(content=pickup_line_prompt),
-        FunctionMessage(name='attrubutes',content=f'''The attributes of person are: {state['attributes']}'''),
-         HumanMessage(content=f'''The required tone: {state["tones"]}''')]
+        FunctionMessage(name='attrubutes',content=f'''The attributes of person are: {state['attributes']}\n. The user is saying: {state['messages'][-1]}'''),
+        HumanMessage(content=f'''The required tone: {state["tones"]}''')]
         pickup_lines = reply_llm.with_structured_output(PickupFormatter).invoke(messages)
         return {
             'messages':[{'role': 'assistant', 'content': str(pickup_lines.model_dump())}],

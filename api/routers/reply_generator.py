@@ -13,7 +13,6 @@ graph = reply_generator.run()
 
 class UserRequest(BaseModel):
     image_base64: str
-    user_query: Optional[str] = None
     tones: Optional[List[str]] = None
 
 @router.post("/reply-generator")
@@ -27,7 +26,6 @@ async def generate_reply(request: UserRequest):
     stored_data['conversation_context'] = conversation_text
 
     result = graph.invoke({
-        'messages': [request.user_query],
         'tones': request.tones,
         'conversation_chat': stored_data['conversation_context']
     },config=config)

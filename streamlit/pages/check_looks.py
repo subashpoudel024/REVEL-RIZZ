@@ -3,7 +3,9 @@ import requests
 import base64
 
 # FastAPI endpoint
-API_URL = "https://dvorakinnovationai-revel-rizz-api.hf.space/api/looks-analyzer"  # Change if deployed elsewhere
+API_URL = "https://dvorakinnovationai-revel-rizz-api.hf.space/api/looks-analyzer" 
+# API_URL = "http://127.0.0.1:8000//api/looks-analyzer"
+
 
 st.set_page_config(page_title="Looks Analyzer", page_icon="🧑‍🎨", layout="centered")
 

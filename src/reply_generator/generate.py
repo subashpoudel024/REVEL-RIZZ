@@ -19,7 +19,7 @@ class Generate:
         print(reply.model_dump())
         
         return {
-            'messages':[{'role': 'assistant', 'content': str(reply.model_dump())}],
+            'messages':[{'role': 'assistant', 'content': f'''The generated replies are: {str(reply.model_dump())}'''}],
             'replies': reply.model_dump()
         }
         

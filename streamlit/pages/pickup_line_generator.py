@@ -2,7 +2,9 @@ import streamlit as st
 import requests
 
 # FastAPI endpoint
-API_URL = "https://dvorakinnovationai-revel-rizz-api.hf.space/api/pickup-line-generator"  # Change if deployed elsewhere
+API_URL = "https://dvorakinnovationai-revel-rizz-api.hf.space/api/pickup-line-generator"
+# API_URL = "http://127.0.0.1:8000//api/pickup-line-generator"
+
 
 st.set_page_config(page_title="Pickup Line Generator", page_icon="💘", layout="centered")
 
@@ -32,7 +34,7 @@ if st.button("Generate Pickup Line"):
             attributes_list = [attr.strip() for attr in attributes.split(",") if attr.strip()]
 
             payload = {
-                "user_query": user_query if user_query.strip() else None,
+                "user_query": user_query if user_query.strip() else '',
                 "tones": tones if tones else None,
                 "attributes": attributes_list,
             }
