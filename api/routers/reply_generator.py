@@ -16,7 +16,7 @@ class UserRequest(BaseModel):
     tones: Optional[List[str]] = None
 
 @router.post("/reply-generator")
-async def generate_reply(request: UserRequest):
+def generate_reply(request: UserRequest):
     """
     Endpoint to extract conversation from a base64-encoded image
     """
