@@ -1,0 +1,37 @@
+name: Sync to Hugging Face hub
+on:
+  push:
+    branches: [main]
+
+  # to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  sync-to-hub:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          lfs: true
+
+      - name: Clean cache files
+        run: |
+          find . -type d -name "__pycache__" -exec rm -rf {} +
+          find . -type f -name "*.pyc" -delete
+          
+      - name: Install Git LFS
+        run: |
+          git lfs install
+          git lfs track "*.png"
+          git lfs track "*.jpg"
+          git lfs track "*.mp4"
+          git lfs track "*.pt"
+          git add .gitattributes
+          git commit -m "Track binaries with LFS" || echo "No changes"
+
+      - name: Push to hub
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: git push --force https://DvorakInnovationAI:$HF_TOKEN@huggingface.co/spaces/DvorakInnovationAI/REVEL-RIZZ-API main
+

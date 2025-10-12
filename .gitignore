@@ -2,3 +2,4 @@
 myenv
 *.pyc
 __pycache__/
+delete_pycache.py

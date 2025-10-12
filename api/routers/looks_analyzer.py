@@ -13,7 +13,7 @@ class UserRequest(BaseModel):
 
 
 @router.post("/looks-analyzer")
-async def generate_reply(request: UserRequest):
+async def analyze_looks(request: UserRequest):
     """
     Endpoint to analyze looks
     """

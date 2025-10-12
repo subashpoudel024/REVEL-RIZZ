@@ -16,7 +16,7 @@ class UserRequest(BaseModel):
 
 
 @router.post("/pickup-line-generator")
-async def generate_reply(request: UserRequest):
+async def generate_pickup_line(request: UserRequest):
     """
     Endpoint to extract conversation from a base64-encoded image
     """
