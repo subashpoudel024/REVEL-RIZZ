@@ -11,4 +11,4 @@ ocr_llm = "gemini-2.5-flash"
 
 
 lang_list = ['en']
-reader = easyocr.Reader(lang_list, gpu=True) 
+reader = easyocr.Reader(lang_list, gpu=False) 
