@@ -1,8 +1,7 @@
 from fastapi import FastAPI, Request
-from api.routers import reply_generator
-from api.routers import pickup_line_generator
-from api.routers import looks_analyzer
-
+from my_fast_api.routers import reply_generator
+from my_fast_api.routers import pickup_line_generator
+from my_fast_api.routers import looks_analyzer
 app = FastAPI()
 
 @app.middleware("http")

@@ -11,3 +11,7 @@ streamlit
 easyocr
 opencv-python
 pillow
+django
+djangorestframework
+markdown      
+django-filter

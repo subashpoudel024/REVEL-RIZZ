@@ -30,8 +30,8 @@ jobs:
           git add .gitattributes
           git commit -m "Track binaries with LFS" || echo "No changes"
 
-      - name: Push to hub
-        env:
-          HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push --force https://DvorakInnovationAI:$HF_TOKEN@huggingface.co/spaces/DvorakInnovationAI/REVEL-RIZZ-API main
+      # - name: Push to hub
+      #   env:
+      #     HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      #   run: git push --force https://DvorakInnovationAI:$HF_TOKEN@huggingface.co/spaces/DvorakInnovationAI/REVEL-RIZZ-API main
 

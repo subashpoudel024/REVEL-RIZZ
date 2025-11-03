@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
 from typing import Optional
-from api.stored_data import stored_data
+from my_fast_api.stored_data import stored_data
 from src.pickup_line_generator.generate import Graph
 from typing import List
 

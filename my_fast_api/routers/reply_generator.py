@@ -3,7 +3,7 @@ from fastapi import APIRouter
 from pydantic import BaseModel
 from typing import Optional
 from src.conversation_extractor.extractor import ConversationExtractor
-from api.stored_data import stored_data
+from my_fast_api.stored_data import stored_data
 from src.reply_generator.generate import Graph
 from typing import List
 
@@ -32,3 +32,5 @@ def generate_reply(request: UserRequest):
     print('The result is:', result)
     return {'response':result['replies']}
     
+
+
