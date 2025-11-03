@@ -15,3 +15,7 @@ django
 djangorestframework
 markdown      
 django-filter
+drf-spectacular
+djangorestframework-simplejwt
+asgiref
+uvicorn
